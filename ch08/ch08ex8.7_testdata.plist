@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="1.0">
+<dict>
+    <key>username</key>
+    <string>john</string>
+    <key>ip</key>
+    <string>192.168.1.1</string>
+    <key>port</key>
+    <integer>143</integer>
+</dict>
+</plist>

@@ -1,0 +1,4 @@
+ch07ex7.1_testdata_0.txt，UTF-8
+ch07ex7.1_testdata_1.txt，ISO-8859-15
+ch07ex7.1_testdata_2.txt，Windows-1252
+

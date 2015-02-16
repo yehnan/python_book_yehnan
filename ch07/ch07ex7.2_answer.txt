@@ -1,0 +1,4 @@
+ch07ex7.2_testdata_0.txt，UTF-8
+ch07ex7.2_testdata_1.txt，Big5+UAO
+ch07ex7.2_testdata_2.txt，GBK
+

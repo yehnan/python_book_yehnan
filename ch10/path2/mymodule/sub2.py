@@ -1,0 +1,5 @@
+
+
+def bar():
+    return 'bar'
+    

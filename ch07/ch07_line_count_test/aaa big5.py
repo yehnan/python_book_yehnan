@@ -1,0 +1,5 @@
+
+# -*- coding: big5 -*-
+
+# ¸òPython¥´©Û©I
+print('§A¦n Python')

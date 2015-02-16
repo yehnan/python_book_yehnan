@@ -1,0 +1,4 @@
+
+def clear():
+    return 'clear'
+    
