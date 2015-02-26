@@ -1,6 +1,7 @@
 
 
-#### generate a set containing prime numbers from 2 to n ####
+from itertools import imap as map
+
 def prime_sieve(n):
     primes = set(range(2, n+1))
     for i in range(2, (n+1+1) // 2):
@@ -11,11 +12,10 @@ def prime_sieve(n):
                 m += 1
     return primes
 
-#### this is not a good algorithm to check prime numbers ####
 def is_prime(n):
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+    return n in prime_sieve(n)
+def sum_of_primes(n):
+    return sum(filter(is_prime, range(2, n+1)))
 
-
+print(sum_of_primes(20))
+print(sum_of_primes(2 * 1000))
