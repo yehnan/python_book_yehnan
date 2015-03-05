@@ -1,1 +1,2 @@
-# python_book_yehnan
+《Python程式設計入門》（書名暫定）一書內的範例程式原始碼。
+
