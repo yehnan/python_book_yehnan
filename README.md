@@ -2,3 +2,5 @@
 出版社：博碩<br/>
 書號：PG21421<br/>
 
+勘誤表請見
+http://yehnan.blogspot.tw/2015/03/python_30.html
