@@ -21,8 +21,8 @@ def sell_tickets(agent_id, nt, lock):
         time.sleep(random.random() * (1 + agent_id/2))
     print('Agent %d done. Totally sells %d tickets' % (agent_id, total))
 
+lock = Lock()
 for i in range(num_agents):
-    t = Thread(target=sell_tickets, args=(i, num_tickets, Lock()))
+    t = Thread(target=sell_tickets, args=(i, num_tickets, lock))
     t.start()
-
 
