@@ -15,10 +15,13 @@ def collatz_i(n):
         else:
             n = 3 * n + 1
     return n
- 
-for i in range(1, 10000+1):
-    if collatz_i(i) != 1:
-        print('collatz_i(' + str(i) + ') failed');
-        break
-else:
-    print('pass')
+
+if __name__ == '__main__':
+    for i in range(1, 10000+1):
+        if collatz_i(i) != 1:
+            print('collatz_i(' + str(i) + ') failed');
+            break
+    else:
+        print('All passed')
+        
+        
