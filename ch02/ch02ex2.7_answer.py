@@ -23,21 +23,20 @@ def plateau(data):
     result_x = data[0]        # 記錄該平台的整數
     count = 1                 # 該平台的長度，目前是1
     
-    for i in range(1, len(data)):          # 從索引值1開始
-                                            # 檢查該元素（整數）是否大於前一平台，
-        if data[i] > result_x:             # 若大於代表進入新的平台
-            if count > count_max:          # 檢查前一平台的長度是否較長
-                result_i_max = result_i
-                result_x_max = result_x
-                count_max = count
+    for i in range(1, len(data)):  # 從索引值1開始
+        if data[i] == result_x:       # 若元素（整數）等於前一平台，該平台的長度加一
+            count += 1                 # 換句話說，該平台繼續延伸
+                                            
+        else: # data[i] > result_x:   # 若大於，代表進入新的平台
             result_i = i                   # 進入新的平台了，
             result_x = data[i]             # 所以重新設定目前正在處理的平台
             count = 1
-        else: # data[i] == result_x:       # 若元素（整數）等於前一平台，該平台的長度加一
-            count += 1                     # 換句話說，該平台繼續延伸
+            
+        if count > count_max:              # 記錄最長平台的資訊
+            result_i_max, result_x_max, count_max = result_i, result_x, count
             
     return result_x_max                    # 此題目要求回傳result_x_max，
-                                           # 有時則會需要result_i_max
+                                           # 有時則會需要result_i_max或count_max
 
 if __name__ == '__main__':
     # simple tests
@@ -53,5 +52,13 @@ if __name__ == '__main__':
     if plateau(data) != 5:
         print('Failed')
         
+    data = [0, 1, 1, 2, 3, 4, 5, 5, 9, 9, 9, 23, 25, 25, 25, 25]
+    if plateau(data) != 25:
+        print('Failed')
+
+    data = [0, 1, 2, 2, 3, 4, 5, 5, 9, 9, 9, 23, 25, 25, 25, 25, 26, 27, 27]
+    if plateau(data) != 25:
+        print('Failed')
+
 # Can you improve this function to use lesser objects?
 
