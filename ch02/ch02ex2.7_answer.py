@@ -32,7 +32,7 @@ def plateau(data):
             result_x = data[i]             # 所以重新設定目前正在處理的平台
             count = 1
             
-        if count > count_max:              # 記錄最長平台的資訊
+        if count > count_max:              # 記錄到目前為止，最長平台的資訊
             result_i_max, result_x_max, count_max = result_i, result_x, count
             
     return result_x_max                    # 此題目要求回傳result_x_max，
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     data = [0, 1, 1, 2, 3, 4, 5, 5, 9, 9, 9, 23, 25, 25, 25]
     if plateau(data) != 9:
         print('Failed')
-        
+
     data = [1, 1, 1, 2, 3, 4, 5, 5, 9, 9, 9, 23, 25, 25, 25]
     if plateau(data) != 1:
         print('Failed')
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     data = [1, 1, 1, 2, 3, 5, 5, 5, 5, 9, 9, 23, 25, 25, 25]
     if plateau(data) != 5:
         print('Failed')
-        
+
     data = [0, 1, 1, 2, 3, 4, 5, 5, 9, 9, 9, 23, 25, 25, 25, 25]
     if plateau(data) != 25:
         print('Failed')
@@ -60,5 +60,18 @@ if __name__ == '__main__':
     if plateau(data) != 25:
         print('Failed')
 
+    
 # Can you improve this function to use lesser objects?
+
+# 若只需知道最長平台的長度，程式碼將非常簡短，如下：
+def plateau_longest_length(data):
+    if len(data) == 0:
+        return None
+
+    length_max = 1
+    for i in range(1, len(data)):
+        if data[i] == data[i - length_max]:
+            length_max += 1
+            
+    return length_max
 
