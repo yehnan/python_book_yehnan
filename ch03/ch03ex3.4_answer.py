@@ -6,7 +6,7 @@ def collatz(n):
     elif n % 2 == 0:
         return collatz(n // 2)
     else:
-        return 3 * collatz(n) + 1
+        return collatz(3 * n + 1)
 
 def collatz_i(n):
     while n != 1:
