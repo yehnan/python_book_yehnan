@@ -9,7 +9,7 @@ def f(n):
     if 0 <= n <= 130:
         return int(n / 130.0 * 60.0)
     elif 130 < n < 200:
-        return int((n - 130) / 70.0 * 15.0 + 60)
+        return int((n - 130) / 70.0 * 25.0 + 60)
     else: # 200 <= n <= 255
         return int((n - 200) / 55.0 * 15.0 + 85)
 
