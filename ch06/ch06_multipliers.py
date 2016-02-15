@@ -36,6 +36,7 @@ def make_multipliers():
 for m in make_multipliers():
     print(m(5))
 print('-' * 20)
+
 for m in [lambda x, n=n: n*x for n in range(3)]:
     print(m(5))
 print('-' * 20)

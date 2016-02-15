@@ -11,7 +11,8 @@ def perm(iterable, r=None):
         if k == 0:
             answers.append(p)
         else:
-            for i in range(k):
+            # for i in range(k): # wrong
+            for i in range(len(items)):
                 # sub(list_del(items, i), k-1, p+(items[i],))
                 sub(items[:i] + items[i+1:], k-1, p+(items[i],))
     sub(items, r, ())
@@ -28,8 +29,8 @@ if __name__ == '__main__':
             print('no')
     for t in tests:
         for r in range(1, len(t)):
-            pa = list(p(t))
-            pb = perm(t)
+            pa = list(p(t, r))
+            pb = perm(t, r)
             if set(pa) == set(pb):
                 print('yes')
             else:
