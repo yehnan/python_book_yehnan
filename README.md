@@ -2,7 +2,7 @@
 出版社：博碩<br/>
 書號：PG21421<br/>
 
-![書籍封面](cover.jpg =400x)
+![書籍封面](cover.jpg) { width: 200px; }
 
 勘誤表請見
 http://yehnan.blogspot.tw/2015/03/python_30.html
