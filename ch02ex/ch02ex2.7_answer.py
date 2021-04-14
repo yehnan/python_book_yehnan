@@ -60,8 +60,7 @@ if __name__ == '__main__':
     if plateau(data) != 25:
         print('Failed')
 
-    
-# Can you improve this function to use lesser objects?
+# 你是否能改進這支函式、使用較少的物件？
 
 # 若只需知道最長平台的長度，程式碼將非常簡短，如下：
 def plateau_longest_length(data):

@@ -12,7 +12,7 @@ def main():
             for c in range(1, 1000-a-b + 1):
                 if is_cardano(a, b, c):
                     count += 1
-                    print(a, b, c)
+                    print("%d: %d, %d, %d" % (count, a, b, c))
     print('Total: %d' % count)
     return count
                 

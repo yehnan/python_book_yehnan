@@ -1,5 +1,6 @@
 
-# not use continue statement
+# don't use continue statement
+
 scores = [30, 99, 41, 55, 84]
 scores_new = []
 for x in scores:

@@ -23,5 +23,5 @@ if __name__ == '__main__':
     for n, fn in n_fn:
         if fn != f(n):
             print('Failed:')
-            print('summation of digits of %d! should be %d not %d' % (n, fn, f(n)))
+            print('summation of digits of %d! should be %d, not %d' % (n, fn, f(n)))
 

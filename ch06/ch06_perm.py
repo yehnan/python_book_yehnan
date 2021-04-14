@@ -4,7 +4,7 @@ from itertools import permutations
 p = permutations
 
 def perm(iterable, r=None):
-    items = list(iterable)
+    items = tuple(iterable)
     r = len(items) if r is None else r
     answers = []
     def sub(items, k, p):

@@ -13,8 +13,11 @@ def factorial_stirling(n):
     
 if __name__ == '__main__':
     # simple test
-    for n in range(2, 20):
+    for n in range(2, 30):
         nf = factorial(n)
         nfs = factorial_stirling(n)
-        print('%d! = %d, stirling: %f' % (n, nf, nfs))
-        print('error: %f' % ((nfs - nf) / nf))
+        error = (nfs - nf) / nf
+        tolerance = 0.1
+        if error >= tolerance:
+            print('%d! = %d, stirling: %f' % (n, nf, nfs))
+            print('error: %f' % ((nfs - nf) / nf))
